@@ -6,7 +6,6 @@ import { toInputView } from 'src/utilities/Normalizers'
 export default class ChangeRowModal extends React.Component {
   constructor (props) {
     super(props)
-    console.log(this.props.contents)
   }
 
   selectOption (column, option) {
