@@ -1,0 +1,12 @@
+li {
+  width: 100px;
+  height: 40px;
+  margin: 5px;
+  display: inline-block;
+  list-style: none;
+  font-size: .9em;
+
+  .field {
+    height: 32px;
+  }
+}

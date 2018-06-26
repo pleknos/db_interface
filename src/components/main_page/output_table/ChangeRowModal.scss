@@ -1,0 +1,32 @@
+.changeRowModal {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(78, 78, 78, 0.54);
+
+  .crmContents {
+    margin-top: 100px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    display: block;
+  }
+
+  .crmButtons {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    button {
+      height: 35px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}

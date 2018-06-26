@@ -1,0 +1,10 @@
+.container {
+  width: 1179px;
+  margin: 0 auto;
+
+  > button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,5 @@
+.tableChangeButton {
+  span:first-of-type::after {
+    content: " / ";
+  }
+}

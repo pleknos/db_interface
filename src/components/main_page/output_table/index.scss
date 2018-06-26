@@ -1,0 +1,42 @@
+.outputTable {
+  display: block;
+  height: 600px;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  overflow: auto;
+  font-size: .8em;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-top: 10px;
+
+  tr:hover {
+    background-color: rgba(255, 247, 177, 0.49);
+  }
+  th {
+    border-spacing: 10px;
+    cursor: pointer;
+    padding: 5px;
+
+    width: 105px;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  td {
+    border-spacing: 10px;
+    border-top: 1px solid #4e4e4e;
+    border-bottom: 1px solid #4e4e4e;
+    border-left: 1px solid #a4a4a4;
+    cursor: pointer;
+    padding: 5px;
+
+    word-wrap: break-word;
+
+    width: 105px;
+    height: 40px;
+    overflow: hidden;
+    display: inline-block;
+    //white-space: nowrap;
+  }
+}
+
