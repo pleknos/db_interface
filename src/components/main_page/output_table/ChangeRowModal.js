@@ -1,11 +1,24 @@
-import React           from 'react'
+import React                   from 'react'
 import './ChangeRowModal.scss'
-import InputField      from 'components/main_page/input_table/InputField'
-import { toInputView } from 'src/utilities/Normalizers'
+import InputField              from 'components/main_page/input_table/InputField'
+import { toInputView }         from 'src/utilities/Normalizers'
+import Postgres                from 'src/utilities/Postgres'
+import { validateTransaction } from 'src/utilities/Validators'
+import { makeError }           from 'utilities/Utilities'
+import Error                   from 'components/Error'
 
 export default class ChangeRowModal extends React.Component {
   constructor (props) {
     super(props)
+    this.updateTransaction = this.updateTransaction.bind(this)
+    this.deleteTransaction = this.deleteTransaction.bind(this)
+
+    this.state = {error: undefined}
+
+    this.cols = {}
+    this.props.contents.cells.forEach(cell => {
+      this.cols[cell.column] = toInputView(cell.value, {type: cell.type})
+    })
   }
 
   selectOption (column, option) {
@@ -14,8 +27,40 @@ export default class ChangeRowModal extends React.Component {
     })
   }
 
-  componentDidUpdate () {
-    console.log(this.state)
+  async updateTransaction () {
+    let difference = {}
+
+    Object.keys(this.cols).forEach(col => {
+      if (this.cols[col] !== this.state[col]) difference[col] = this.state[col]
+    })
+
+    try {
+      const changes = validateTransaction(difference, this.props.columns)
+
+      await Postgres.update(
+        {place: 'public.' + this.props.currentTable, changes: changes, where: 'id = ' + this.props.contents.id},
+      )
+
+      this.props.reloadRows(true)
+
+    } catch (error) {
+      makeError(error, this.props.caller)
+      console.error(error.message)
+    }
+  }
+
+  async deleteTransaction () {
+    try {
+      await Postgres.delete(
+        {place: 'public.' + this.props.currentTable, where: 'id = ' + this.props.contents.id},
+      )
+
+      this.props.reloadRows(true)
+
+    } catch (error) {
+      makeError(error, this.props.caller)
+      console.error(error.message)
+    }
   }
 
   render () {
@@ -46,11 +91,12 @@ export default class ChangeRowModal extends React.Component {
         <ul>{inputFields}</ul>
 
         <div className='crmButtons'>
-          <button>Изменить</button>
-          <button>Удалить</button>
+          <button onClick={this.updateTransaction}>Изменить</button>
+          <button onClick={this.deleteTransaction}>Удалить</button>
           <button onClick={this.props.onClick}>Закрыть</button>
         </div>
       </div>
+      {this.state.error && <Error data={this.state.error} />}
     </div>
   }
 }

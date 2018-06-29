@@ -70,7 +70,7 @@ export default class OutputTable extends React.Component {
   }
 
   initiateChangeRow ({cells, id}) {
-    console.log(cells, id)
+    //console.log(cells, id)
     this.setState({changeRowModal: !this.state.changeRowModal, changeRowModalContents: {cells, id}})
   }
 
@@ -104,7 +104,8 @@ export default class OutputTable extends React.Component {
         <SumOutputField filter={this.filter} filterState={this.filter.state} current={this.props.currentTable} />
         {this.state.changeRowModal &&
         <ChangeRowModal onClick={this.initiateChangeRow} contents={this.state.changeRowModalContents}
-                        currentTable={this.props.currentTable} columns={columns} />}
+                        currentTable={this.props.currentTable} columns={columns} caller={this}
+                        reloadRows={this.props.reloadRows} />}
         {this.state.error && <Error data={this.state.error} />}
       </div>
     )

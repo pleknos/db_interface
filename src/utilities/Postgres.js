@@ -25,6 +25,31 @@ export default class Postgres {
 
   }
 
+  static update ({place, changes, where}) {
+    if (place === undefined || changes === undefined || where === undefined) {
+      throw new Error('Недостаточно данных для транзакции')
+    }
+
+    let updateString = `UPDATE ${place} SET`
+
+    Object.entries(changes).forEach((entry) => {
+      updateString += ` ${entry[0]} = '${entry[1]}',`
+    })
+    updateString = updateString.slice(0, -1)
+
+    updateString += ` WHERE ${where}`
+
+    return db.any(updateString)
+  }
+
+  static delete ({place, where}) {
+    if (place === undefined || where === undefined) throw new Error('Недостаточно данных для транзакции')
+
+    let deleteString = `DELETE FROM ${place} WHERE ${where}`
+
+    return db.any(deleteString)
+  }
+
   static insertTransaction ({transaction, place}) {
     const insertString = `
       INSERT INTO ${place} (${Object.keys(transaction).toString()}) 

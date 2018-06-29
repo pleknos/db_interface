@@ -11,7 +11,8 @@ export const validateTransaction = (transaction, columns) => {
   let valid = {}
 
   for (let column of columns) {
-    valid[column.name] = validateSingle(transaction[column.name], column)
+
+    if (transaction[column.name]) valid[column.name] = validateSingle(transaction[column.name], column)
   }
 
   return valid
