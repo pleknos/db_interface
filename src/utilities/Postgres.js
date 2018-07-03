@@ -1,5 +1,6 @@
-import * as pgp   from 'pg-promise'
-import connection from 'configs/db_settings'
+import * as pgp from 'pg-promise'
+//import connection from 'db_settings'
+const connection = eval('require')('./db_settings')
 
 const db = pgp.default()(connection)
 
