@@ -1,0 +1,23 @@
+.column {
+  padding: 5px 0;
+  height: 20px;
+  width: 200px;
+  display: inline-block;
+  margin-left: -5px;
+  overflow: hidden;
+}
+
+.ids {
+  width: 120px;
+}
+
+.names {
+  width: 300px;
+}
+
+.header .column {
+  font-weight: 600;
+  border-top: 3px solid #4e4e4e;
+  border-bottom: 3px solid #4e4e4e;
+}
+
