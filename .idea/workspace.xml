@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35774edf-2881-4bd1-94c1-3b3125add39a" name="Default" comment="first step in making reports_page">
-      <change afterPath="$PROJECT_DIR$/src/components/RadioButton.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reports_page/ChooseActivities.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reports_page/ChoosePeriod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reports_page/ChooseReport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reports_page/CreateReport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reports_page/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reports_page/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utilities/Report.js" afterDir="false" />
+    <list default="true" id="35774edf-2881-4bd1-94c1-3b3125add39a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main_page/TableChangeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RadioButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main_page/TableChangeButton.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main_page/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main_page/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main_page/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/Normalizers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/Normalizers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/Postgres.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/Postgres.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reports_page/CreateReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reports_page/CreateReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reports_page/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reports_page/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/Report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/Report.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CreateReport.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreateReport.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/reports_page/CreateReport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="390">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -44,14 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Report.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/utilities/Report.js">
+      <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/reports_page/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-              <folding>
-                <element signature="e#628#1299#0" />
-              </folding>
+            <state relative-caret-position="265">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -108,13 +92,13 @@
         <option value="$PROJECT_DIR$/src/main.scss" />
         <option value="$PROJECT_DIR$/src/utilities/Normalizers.js" />
         <option value="$PROJECT_DIR$/src/components/reports_page/ChoosePeriod.js" />
-        <option value="$PROJECT_DIR$/src/components/reports_page/index.scss" />
         <option value="$PROJECT_DIR$/src/components/reports_page/ChooseActivities.js" />
         <option value="$PROJECT_DIR$/src/components/reports_page/index.js" />
-        <option value="$PROJECT_DIR$/src/components/reports_page/CreateReport.js" />
         <option value="$PROJECT_DIR$/src/components/reports_page/ChooseReport.js" />
         <option value="$PROJECT_DIR$/src/utilities/Postgres.js" />
         <option value="$PROJECT_DIR$/src/utilities/Report.js" />
+        <option value="$PROJECT_DIR$/src/components/reports_page/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/reports_page/CreateReport.js" />
       </list>
     </option>
   </component>
@@ -155,6 +139,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,17 +165,10 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="reports_page" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="db2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="db2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utilities" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -216,15 +194,15 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\code\db2\src\fonts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\code\db2\src\utilities" />
       <recent name="D:\code\db2\src\components" />
       <recent name="D:\code\db2\src\components\main_page\output_table" />
       <recent name="D:\code\db2\src\components\main_page" />
       <recent name="D:\code\db2\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\db2\src\fonts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -298,6 +276,7 @@
       <workItem from="1530370395043" duration="9269000" />
       <workItem from="1530437931261" duration="2000" />
       <workItem from="1530533761097" duration="19532000" />
+      <workItem from="1530614220839" duration="4959000" />
     </task>
     <task id="LOCAL-00001" summary="MAin logic of ChangeRowModal finished">
       <created>1530045906145</created>
@@ -313,11 +292,25 @@
       <option name="project" value="LOCAL" />
       <updated>1530274122644</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="first step in making report">
+      <created>1530614319355</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1530614319355</updated>
+    </task>
+    <task id="LOCAL-00004" summary="report creation success">
+      <created>1530617885657</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1530617885658</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159394000" />
+    <option name="totallyTimeSpent" value="164353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -354,7 +347,9 @@
     <MESSAGE value="MAin logic of ChangeRowModal finished" />
     <MESSAGE value="main_page logic finished" />
     <MESSAGE value="first step in making reports_page" />
-    <option name="LAST_COMMIT_MESSAGE" value="first step in making reports_page" />
+    <MESSAGE value="first step in making report" />
+    <MESSAGE value="report creation success" />
+    <option name="LAST_COMMIT_MESSAGE" value="report creation success" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -616,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/reports_page/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/reports_page/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -653,16 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/reports_page/CreateReport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utilities/Postgres.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -672,10 +650,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utilities/Report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        <state relative-caret-position="520">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/reports_page/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/reports_page/CreateReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
-            <element signature="e#628#1299#0" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

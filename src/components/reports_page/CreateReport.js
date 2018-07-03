@@ -8,12 +8,23 @@ export default class CreateReport extends React.Component {
     this.createReport = this.createReport.bind(this)
   }
 
-  async createReport () {
-    const reportObject = await new Report(this.props.state)
+  async createReport (event) {
+    const target = event.target
+
+    target.disabled = true
+    target.innerText = 'Создается...'
+
+    try {
+      const reportObject = await new Report(this.props.state)
+      console.log(reportObject)
+    } finally {
+      target.disabled = false
+      target.innerText = 'Создать отчет'
+    }
   }
 
   render () {
-    return <button onClick={this.createReport}>Создать отчет</button>
+    return <button className='createReportButton' onClick={this.createReport}>Создать отчет</button>
   }
 }
 

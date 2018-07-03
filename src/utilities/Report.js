@@ -5,7 +5,7 @@ export default class Report {
     this.report = report
     this.activities = activities.map(act => act.value && act.id).filter(act => act)
     this.period = period
-    this.createReport()
+    return this.createReport()
   }
 
   async createReport () {
@@ -22,7 +22,7 @@ export default class Report {
       await this.fillContents(contents, 1, reportObject[activity], data)
     }
 
-    console.log(reportObject)
+    return reportObject
   }
 
   async fillContents (contents, counter, reportObject, prevData) {
