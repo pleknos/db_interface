@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="35774edf-2881-4bd1-94c1-3b3125add39a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +20,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state relative-caret-position="52">
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -245,7 +246,7 @@
       <workItem from="1530437931261" duration="2000" />
       <workItem from="1530533761097" duration="19532000" />
       <workItem from="1530614220839" duration="10979000" />
-      <workItem from="1530649147764" duration="5770000" />
+      <workItem from="1530649147764" duration="5931000" />
     </task>
     <task id="LOCAL-00001" summary="MAin logic of ChangeRowModal finished">
       <created>1530045906145</created>
@@ -324,17 +325,24 @@
       <option name="project" value="LOCAL" />
       <updated>1530654687920</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="gitignore">
+      <created>1530654935163</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1530654935163</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176143000" />
+    <option name="totallyTimeSpent" value="176304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1609375" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1609375" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50104165" side_tool="true" weight="0.26745436" />
@@ -342,7 +350,7 @@
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32975295" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49895832" weight="0.23200859" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.25993556" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.25993556" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.39849624" />
       <window_info anchor="bottom" id="TypeScript" order="1" />
@@ -400,7 +408,8 @@
     <MESSAGE value="ignore .idea" />
     <MESSAGE value="changed .gitignore" />
     <MESSAGE value="+app" />
-    <option name="LAST_COMMIT_MESSAGE" value="+app" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -728,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="52">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         </state>
       </provider>
     </entry>
