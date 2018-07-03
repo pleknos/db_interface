@@ -17,7 +17,11 @@ export default class Report {
       let {amounts, data} = this.filterAndFill([wholeFact, wholePlan, beforeFact, beforePlan], 'activity_type',
         activity)
 
+      let name = (await Postgres.select(
+        {subject: 'name', place: 'public.activity_types', where: 'id = ' + activity}))[0].name
+
       reportObject[activity] = amounts
+      reportObject[activity].name = name
 
       await this.fillContents(contents, 1, reportObject[activity], data)
     }
