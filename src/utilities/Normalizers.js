@@ -31,3 +31,13 @@ export const niceDate = date => {
   return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
 }
 
+export const inputDate = date => {
+  let month = (date.getMonth() + 1).toString()
+  let rdate = (date.getDate()).toString()
+
+  month = month.length === 2 ? month : '0' + month
+  rdate = rdate.length === 2 ? rdate : '0' + rdate
+
+  return `${date.getFullYear()}-${month}-${rdate}`
+}
+

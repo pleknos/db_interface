@@ -1,10 +1,12 @@
 import React from 'react'
-import 'components/main_page/TableChangeButton.scss'
+import './RadioButton.scss'
 
-const TableChangeButton = (props) => {
+const RadioButton = (props) => {
+
+  const style = props.style ? props.style : {}
 
   return (
-    <button className='tableChangeButton' onClick={props.onClick}>
+    <button className='radioButton' onClick={props.onClick} style={style}>
       {
         props.options.map(option => {
           if (props.current === option.value) return <span key={option.value}><strong>{option.label}</strong></span>
@@ -15,4 +17,4 @@ const TableChangeButton = (props) => {
   )
 }
 
-export default TableChangeButton
+export default RadioButton

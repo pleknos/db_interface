@@ -1,11 +1,10 @@
-import React             from 'react'
-import InputTable        from 'components/main_page/input_table'
-import Postgres          from 'utilities/Postgres'
-import OutputTable       from 'components/main_page/output_table'
-import TableChangeButton from 'components/main_page/TableChangeButton'
-import FilterModal       from 'components/main_page/filter_modal'
-import 'components/main_page/index.scss'
-import Filter            from 'utilities/Filter'
+import React       from 'react'
+import InputTable  from 'components/main_page/input_table'
+import Postgres    from 'utilities/Postgres'
+import OutputTable from 'components/main_page/output_table'
+import RadioButton from 'components/RadioButton'
+import FilterModal from 'components/main_page/filter_modal'
+import Filter      from 'utilities/Filter'
 
 export default class MainPage extends React.Component {
 
@@ -77,8 +76,8 @@ export default class MainPage extends React.Component {
 
     return (
 
-      <div className='container'>
-        <TableChangeButton current={this.state.currentTable} options={options} onClick={this.changeTable} />
+      <div>
+        <RadioButton current={this.state.currentTable} options={options} onClick={this.changeTable} />
         <button onClick={this.handleModalToggle}>Добавить фильтр</button>
 
         <InputTable reloadRows={this.reloadRows}

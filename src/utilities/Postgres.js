@@ -22,7 +22,6 @@ export default class Postgres {
     if (offset) selectString += ` OFFSET ${offset}`
 
     return db.any(selectString)
-
   }
 
   static update ({place, changes, where}) {
