@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="35774edf-2881-4bd1-94c1-3b3125add39a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reports_page/CreateReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reports_page/CreateReport.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,29 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="report.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/report.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-515">
-              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="report.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/report.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="78">
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -150,29 +130,6 @@
             <path>
               <item name="db2" type="b2602c69:ProjectViewProjectNode" />
               <item name="db2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="db2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="db2" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="db2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="db2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="db2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="db2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="db2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="db2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="reports_page" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -288,7 +245,7 @@
       <workItem from="1530437931261" duration="2000" />
       <workItem from="1530533761097" duration="19532000" />
       <workItem from="1530614220839" duration="10979000" />
-      <workItem from="1530649147764" duration="5475000" />
+      <workItem from="1530649147764" duration="5770000" />
     </task>
     <task id="LOCAL-00001" summary="MAin logic of ChangeRowModal finished">
       <created>1530045906145</created>
@@ -353,11 +310,25 @@
       <option name="project" value="LOCAL" />
       <updated>1530635898706</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changed .gitignore">
+      <created>1530654651883</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1530654651883</updated>
+    </task>
+    <task id="LOCAL-00011" summary="+app">
+      <created>1530654687920</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1530654687920</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175848000" />
+    <option name="totallyTimeSpent" value="176143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -371,7 +342,7 @@
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32975295" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49895832" weight="0.23200859" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.25993556" />
+      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.25993556" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.39849624" />
       <window_info anchor="bottom" id="TypeScript" order="1" />
@@ -427,7 +398,9 @@
     <MESSAGE value="added names to activity_types" />
     <MESSAGE value="moved configs away from src" />
     <MESSAGE value="ignore .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignore .idea" />
+    <MESSAGE value="changed .gitignore" />
+    <MESSAGE value="+app" />
+    <option name="LAST_COMMIT_MESSAGE" value="+app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -748,15 +721,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-515">
+        <state relative-caret-position="312">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        <state relative-caret-position="78">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
