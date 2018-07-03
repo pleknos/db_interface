@@ -9,23 +9,48 @@ export default class Report {
   }
 
   async createReport () {
-    const contents = await this.loadReportContents()
+    let contents = await this.loadReportContents()
     let [wholeFact, wholePlan, beforeFact, beforePlan] = await this.loadActivities()
     let reportObject = this.fillObject(wholeFact, wholePlan, beforeFact, beforePlan)
 
-    this.activities.forEach(activity => {
-      reportObject[activity] =
-        this.filterAndFill([wholeFact, wholePlan, beforeFact, beforePlan], 'activity_type', activity)
-    })
+    for (let activity of this.activities) {
+      let {amounts, data} = this.filterAndFill([wholeFact, wholePlan, beforeFact, beforePlan], 'activity_type',
+        activity)
+
+      reportObject[activity] = amounts
+
+      await this.fillContents(contents, 1, reportObject[activity], data)
+    }
 
     console.log(reportObject)
+  }
+
+  async fillContents (contents, counter, reportObject, prevData) {
+    if (contents[counter] === undefined) return false
+
+    let tableCol = contents[counter]
+    let table = contents[counter] + 's'
+
+    const tableCols = await Postgres.select({place: 'public.' + table, direction: 'ASC'})
+
+    for (let col of tableCols) {
+      let {amounts, data} = this.filterAndFill(prevData, tableCol,
+        col.id)
+
+      if (amounts.fact === 0 && amounts.plan === 0 && amounts.factBefore === 0 && amounts.planBefore === 0) continue
+
+      reportObject[col.id] = amounts
+      reportObject[col.id].name = col.name
+
+      await this.fillContents(contents, counter + 1, reportObject[col.id], data)
+    }
   }
 
   filterAndFill (data, key, value) {
     let res = data.map(table => {
       return table.filter(row => { return row[key] === value})
     })
-    return this.fillObject(...res)
+    return {amounts: this.fillObject(...res), data: res}
   }
 
   fillObject (fact, plan, factBefore, planBefore) {
