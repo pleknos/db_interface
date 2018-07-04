@@ -13,6 +13,7 @@ const colors = ['#21247F', '#45477F', '#6F72CC', '#8B8EFF', '#D7D8FF', 'white']
 const makeReport = (data) => {
   const app = document.getElementById('app')
   const header = document.createElement('div')
+  const whole = document.createElement('div')
 
   header.className = 'header'
 
@@ -25,7 +26,18 @@ const makeReport = (data) => {
           <span class='column'>Долг на конец</span>
         `
 
+  whole.innerHTML = `
+          <span class='column whole ids'></span>
+          <span class='column whole names'>Итого</span>
+          <span class='column whole '>${((data.planBefore - data.factBefore) / 100).toLocaleString()}</span>
+          <span class='column whole '>${(data.plan / 100).toLocaleString()}</span>
+          <span class='column whole '>${(data.fact / 100).toLocaleString()}</span>
+          <span class='column whole '>${((data.planBefore - data.factBefore + data.plan -
+    data.fact) / 100).toLocaleString()}</span>
+        `
+
   app.append(header)
+  app.append(whole)
 
   iterate(data, app, '', 0)
 }
@@ -58,6 +70,7 @@ const iterate = (data, container, previousRows, colorIterator) => {
         `
 
       container.append(item)
+
       iterate(data[row], item, rowIds + '.', colorIterator + 1)
     }
   }

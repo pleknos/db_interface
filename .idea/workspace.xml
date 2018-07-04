@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35774edf-2881-4bd1-94c1-3b3125add39a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ple.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/report.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reports_page/CreateReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reports_page/CreateReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/electro.js" beforeDir="false" afterPath="$PROJECT_DIR$/electro.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,30 +18,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="report.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="806">
+              <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="report.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="report.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/report.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+            <state relative-caret-position="442">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="report.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/report.html">
+      <file leaf-file-name="electro.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/electro.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="-206">
+              <caret column="48" selection-start-column="48" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -97,7 +94,6 @@
         <option value="$PROJECT_DIR$/src/components/reports_page/index.js" />
         <option value="$PROJECT_DIR$/src/components/reports_page/ChooseReport.js" />
         <option value="$PROJECT_DIR$/src/components/reports_page/index.scss" />
-        <option value="$PROJECT_DIR$/electro.js" />
         <option value="$PROJECT_DIR$/src/report_window/index.html" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/components/main_page/output_table/ChangeRowModal.js" />
@@ -108,6 +104,7 @@
         <option value="$PROJECT_DIR$/src/components/reports_page/CreateReport.js" />
         <option value="$PROJECT_DIR$/app/report.js" />
         <option value="$PROJECT_DIR$/app/report.css" />
+        <option value="$PROJECT_DIR$/electro.js" />
       </list>
     </option>
   </component>
@@ -164,19 +161,6 @@
               <item name="db2" type="b2602c69:ProjectViewProjectNode" />
               <item name="db2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="db2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="db2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="db2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="db2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="reports_page" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -294,7 +278,9 @@
       <workItem from="1530614220839" duration="10979000" />
       <workItem from="1530649147764" duration="6529000" />
       <workItem from="1530701828048" duration="1238000" />
-      <workItem from="1530718559791" duration="5139000" />
+      <workItem from="1530718559791" duration="6315000" />
+      <workItem from="1530729570993" duration="560000" />
+      <workItem from="1530730283610" duration="573000" />
     </task>
     <task id="LOCAL-00001" summary="MAin logic of ChangeRowModal finished">
       <created>1530045906145</created>
@@ -394,11 +380,18 @@
       <option name="project" value="LOCAL" />
       <updated>1530720443367</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added style">
+      <created>1530723803241</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1530723803242</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183279000" />
+    <option name="totallyTimeSpent" value="185588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -472,7 +465,8 @@
     <MESSAGE value="+app" />
     <MESSAGE value="gitignore" />
     <MESSAGE value="contragents groups" />
-    <option name="LAST_COMMIT_MESSAGE" value="contragents groups" />
+    <MESSAGE value="added style" />
+    <option name="LAST_COMMIT_MESSAGE" value="added style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -704,13 +698,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ReportWindow.js" />
-    <entry file="file://$PROJECT_DIR$/electro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/report_window/index.js" />
     <entry file="file://$PROJECT_DIR$/src/report_window/index.html" />
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
@@ -786,15 +773,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="806">
+          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/report.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        <state relative-caret-position="442">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/electro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206">
+          <caret column="48" selection-start-column="48" selection-end-column="48" />
         </state>
       </provider>
     </entry>

@@ -11,6 +11,13 @@ body {
   overflow: hidden;
 }
 
+.whole {
+  height: 20px;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+}
+
 .ids {
   margin-left: 2px;
   width: 80px;
