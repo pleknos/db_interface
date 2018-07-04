@@ -17,8 +17,9 @@ export default class CreateReport extends React.Component {
     try {
       const reportObject = await new Report(this.props.state)
       const reportWindow = window.open('report.html')
-
-      reportWindow.postMessage(reportObject, '*')
+      setTimeout(() => {
+        reportWindow.postMessage(reportObject, '*')
+      }, 1000)
 
     } finally {
       target.disabled = false

@@ -9,6 +9,7 @@ export default class Report {
   }
 
   async createReport () {
+    this.contargentsGroups = (await Postgres.select({place: 'public.contragents_groups', direction: 'ASC'}))
     let contents = await this.loadReportContents()
     let [wholeFact, wholePlan, beforeFact, beforePlan] = await this.loadActivities()
     let reportObject = this.fillObject(wholeFact, wholePlan, beforeFact, beforePlan)
@@ -43,10 +44,34 @@ export default class Report {
 
       if (amounts.fact === 0 && amounts.plan === 0 && amounts.factBefore === 0 && amounts.planBefore === 0) continue
 
-      reportObject[col.id] = amounts
-      reportObject[col.id].name = col.name
+      if (tableCol === 'contragent') {
 
-      await this.fillContents(contents, counter + 1, reportObject[col.id], data)
+        if (parseInt(col.group_id) !== 1) {
+          for (let group of this.contargentsGroups) {
+            if (col.group_id === group.id) {
+              if (reportObject[group.id]) {
+                reportObject[group.id].fact += amounts.fact
+                reportObject[group.id].plan += amounts.plan
+                reportObject[group.id].factBefore += amounts.factBefore
+                reportObject[group.id].planBefore += amounts.planBefore
+              } else {
+                reportObject[group.id] = amounts
+                reportObject[group.id].name = group.name
+              }
+              await this.fillContents(contents, counter + 1, reportObject[group.id], data)
+            }
+          }
+        } else {
+          reportObject[col.id + 10] = amounts
+          reportObject[col.id + 10].name = col.name
+          await this.fillContents(contents, counter + 1, reportObject[col.id + 10], data)
+        }
+
+      } else {
+        reportObject[col.id] = amounts
+        reportObject[col.id].name = col.name
+        await this.fillContents(contents, counter + 1, reportObject[col.id], data)
+      }
     }
   }
 
