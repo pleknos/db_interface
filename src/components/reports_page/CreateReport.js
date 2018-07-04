@@ -16,7 +16,8 @@ export default class CreateReport extends React.Component {
 
     try {
       const reportObject = await new Report(this.props.state)
-      const reportWindow = window.open('report.html')
+      const reportWindow = window.open('report.html', '', 'width=700,height=800')
+
       setTimeout(() => {
         reportWindow.postMessage(reportObject, '*')
       }, 1000)

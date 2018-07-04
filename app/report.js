@@ -4,6 +4,10 @@ function receiveMessage (event) {
   makeReport(event.data)
 }
 
+document.querySelector('.print').onclick = () => {
+  window.print()
+}
+
 const colors = ['#21247F', '#45477F', '#6F72CC', '#8B8EFF', '#D7D8FF', 'white']
 
 const makeReport = (data) => {

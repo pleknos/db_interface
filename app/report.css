@@ -1,23 +1,54 @@
+body {
+  font-size: .8em;
+}
+
 .column {
   padding: 5px 0;
-  height: 20px;
-  width: 200px;
+  height: 25px;
+  width: 100px;
   display: inline-block;
   margin-left: -5px;
   overflow: hidden;
 }
 
 .ids {
-  width: 120px;
+  margin-left: 2px;
+  width: 80px;
 }
 
 .names {
-  width: 300px;
+  width: 160px;
 }
 
 .header .column {
   font-weight: 600;
   border-top: 3px solid #4e4e4e;
   border-bottom: 3px solid #4e4e4e;
+}
+
+.print {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  border: 1px solid black
+}
+
+.print:hover {
+  background-color: #eaeaea;
+}
+
+.print:active {
+  background-color: #d9d9d9;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+
+  .print {
+    display: none;
+  }
 }
 
