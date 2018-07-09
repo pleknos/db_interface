@@ -1,4 +1,6 @@
 app/db_settings.json
 node_modules
 .idea
+.prettierrc.json
+.eslintrc.json
 builds
