@@ -10,7 +10,7 @@ document.querySelector('.print').onclick = () => {
 
 const colors = ['#21247F', '#45477F', '#6F72CC', '#8B8EFF', '#D7D8FF', 'white']
 
-const makeReport = (data) => {
+const makeReport = data => {
   const app = document.getElementById('app')
   const header = document.createElement('div')
   const whole = document.createElement('div')

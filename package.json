@@ -8,7 +8,7 @@
   "scripts": {
     "webpack": "webpack --config webpack.config.js",
     "electron": "electron .",
-    "build": "electron-packager ./ dbclient32 --platform=win32 --arch=ia32 --ignore=\"\\.gitignore|src|.idea|webpack.config.js\""
+    "build": "electron-packager ./ dbclient32 --platform=win32 --arch=ia32 --ignore=\"\\.gitignore|src|.idea|webpack.config.js|.prettierrc.json|.eslintrc.json\""
   },
   "babel": {
     "presets": [
