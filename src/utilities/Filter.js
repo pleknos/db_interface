@@ -1,20 +1,20 @@
 import { toOutputView, toInputView } from 'utilities/Normalizers'
 
 export default class Filter {
-  constructor () {
+  constructor() {
     this.default = {
       subject: '*',
       where: undefined,
       director: 'id',
-      direction: 'DESC',
+      direction: 'DESC'
     }
   }
 
   //statement = 'where' => argument = {column, value, type}
-  add (statement, argument, validation = true) {
+  add(statement, argument, validation = true) {
     if (statement === 'where') {
-      if (validation) argument.value =
-        toOutputView(toInputView(argument.value, {type: argument.type}), {type: argument.type})
+      if (validation)
+        argument.value = toOutputView(toInputView(argument.value, { type: argument.type }), { type: argument.type })
 
       const operator = argument.type === 'commentary' ? 'LIKE' : '='
 
@@ -27,7 +27,6 @@ export default class Filter {
       } else {
         this.where = `${argument.column} ${operator} '${argument.value}'`
       }
-
     } else {
       this[statement] = argument
     }
@@ -35,7 +34,7 @@ export default class Filter {
     return this
   }
 
-  reset () {
+  reset() {
     delete this.subject
     delete this.where
     delete this.director
@@ -44,16 +43,16 @@ export default class Filter {
     return this
   }
 
-  get state () {
+  get state() {
     return JSON.stringify(this.make())
   }
 
-  make () {
+  make() {
     return {
       subject: this.subject || this.default.subject,
       where: this.where || this.default.where,
       director: this.director || this.default.director,
-      direction: this.direction || this.default.direction,
+      direction: this.direction || this.default.direction
     }
   }
 }

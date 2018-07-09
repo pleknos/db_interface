@@ -5,8 +5,7 @@ const connection = eval('require')('./db_settings')
 const db = pgp.default()(connection)
 
 export default class Postgres {
-
-  static select ({subject = '*', place, where, amount, offset, director = 'id', direction}) {
+  static select({ subject = '*', place, where, amount, offset, director = 'id', direction }) {
     if (place === undefined) throw new Error('select a table to fetch data from')
 
     let selectString = `SELECT ${subject} FROM ${place}`
@@ -25,14 +24,14 @@ export default class Postgres {
     return db.any(selectString)
   }
 
-  static update ({place, changes, where}) {
+  static update({ place, changes, where }) {
     if (place === undefined || changes === undefined || where === undefined) {
       throw new Error('Недостаточно данных для транзакции')
     }
 
     let updateString = `UPDATE ${place} SET`
 
-    Object.entries(changes).forEach((entry) => {
+    Object.entries(changes).forEach(entry => {
       updateString += ` ${entry[0]} = '${entry[1]}',`
     })
     updateString = updateString.slice(0, -1)
@@ -42,7 +41,7 @@ export default class Postgres {
     return db.any(updateString)
   }
 
-  static delete ({place, where}) {
+  static delete({ place, where }) {
     if (place === undefined || where === undefined) throw new Error('Недостаточно данных для транзакции')
 
     let deleteString = `DELETE FROM ${place} WHERE ${where}`
@@ -50,13 +49,14 @@ export default class Postgres {
     return db.any(deleteString)
   }
 
-  static insertTransaction ({transaction, place}) {
+  static insertTransaction({ transaction, place }) {
     const insertString = `
       INSERT INTO ${place} (${Object.keys(transaction).toString()}) 
-      VALUES (${Object.values(transaction).map(each => '\'' + each + '\'').toString()})
+      VALUES (${Object.values(transaction)
+        .map(each => "'" + each + "'")
+        .toString()})
     `
 
     return db.any(insertString)
   }
-
 }

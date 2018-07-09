@@ -1,39 +1,42 @@
-import React         from 'react'
+import React from 'react'
 import { inputDate } from 'utilities/Normalizers'
 
 export default class ChoosePeriod extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.type = 'period'
     this.today = inputDate(new Date())
 
-    this.state = {periodType: 'month', firstDate: this.today, lastDate: this.today}
+    this.state = { periodType: 'month', firstDate: this.today, lastDate: this.today }
 
     this.makeChange = this.makeChange.bind(this)
     this.onDateChange = this.onDateChange.bind(this)
     this.onPeriodTypeChange = this.onPeriodTypeChange.bind(this)
   }
 
-  onPeriodTypeChange (event) {
-    this.setState({periodType: event.target.value})
+  onPeriodTypeChange(event) {
+    this.setState({ periodType: event.target.value })
   }
 
-  onDateChange (event, pos) {
-    this.setState({[pos]: event.target.value})
+  onDateChange(event, pos) {
+    this.setState({ [pos]: event.target.value })
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.makeChange()
   }
 
-  componentDidUpdate (prevProps, prevState) {
-    if (prevState.periodType !== this.state.periodType || prevState.firstDate !== this.state.firstDate ||
-      prevState.lastDate !== this.state.lastDate) {
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      prevState.periodType !== this.state.periodType ||
+      prevState.firstDate !== this.state.firstDate ||
+      prevState.lastDate !== this.state.lastDate
+    ) {
       this.makeChange()
     }
   }
 
-  makeChange () {
+  makeChange() {
     switch (this.state.periodType) {
       case 'month': {
         const date = this.state.firstDate.split('-')
@@ -41,7 +44,7 @@ export default class ChoosePeriod extends React.Component {
         const first = `1/${date[1]}/${date[0]}`
         const last = `${lastDay}/${date[1]}/${date[0]}`
 
-        this.props.onChange(this.type, {first, last})
+        this.props.onChange(this.type, { first, last })
 
         break
       }
@@ -49,7 +52,7 @@ export default class ChoosePeriod extends React.Component {
         const date = this.state.firstDate.split('-')
         const first = `${date[2]}/${date[1]}/${date[0]}`
 
-        this.props.onChange(this.type, {first, last: first})
+        this.props.onChange(this.type, { first, last: first })
 
         break
       }
@@ -60,25 +63,26 @@ export default class ChoosePeriod extends React.Component {
         const first = `${fdate[2]}/${fdate[1]}/${fdate[0]}`
         const last = `${ldate[2]}/${ldate[1]}/${ldate[0]}`
 
-        this.props.onChange(this.type, {first, last})
+        this.props.onChange(this.type, { first, last })
 
         break
       }
     }
   }
 
-  render () {
+  render() {
     return (
-      <div className='choiceDiv'>
+      <div className="choiceDiv">
         <h2>Период</h2>
-        <select name='selectPeriodType' value={this.state.periodType} onChange={this.onPeriodTypeChange}>
-          <option value='month'>Месяц</option>
-          <option value='day'>День</option>
-          <option value='period'>Период</option>
+        <select name="selectPeriodType" value={this.state.periodType} onChange={this.onPeriodTypeChange}>
+          <option value="month">Месяц</option>
+          <option value="day">День</option>
+          <option value="period">Период</option>
         </select>
-        <input type='date' value={this.state.firstDate} onChange={(event) => this.onDateChange(event, 'firstDate')} />
-        {this.state.periodType === 'period' &&
-        <input type='date' value={this.state.lastDate} onChange={(event) => this.onDateChange(event, 'lastDate')} />}
+        <input type="date" value={this.state.firstDate} onChange={event => this.onDateChange(event, 'firstDate')} />
+        {this.state.periodType === 'period' && (
+          <input type="date" value={this.state.lastDate} onChange={event => this.onDateChange(event, 'lastDate')} />
+        )}
       </div>
     )
   }

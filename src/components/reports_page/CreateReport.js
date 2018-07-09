@@ -1,14 +1,14 @@
-import React  from 'react'
+import React from 'react'
 import Report from 'utilities/Report'
 
 export default class CreateReport extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     this.createReport = this.createReport.bind(this)
   }
 
-  async createReport (event) {
+  async createReport(event) {
     const target = event.target
 
     target.disabled = true
@@ -21,17 +21,17 @@ export default class CreateReport extends React.Component {
       setTimeout(() => {
         reportWindow.postMessage(reportObject, '*')
       }, 1000)
-
     } finally {
       target.disabled = false
       target.innerText = 'Создать отчет'
     }
   }
 
-  render () {
-    return <button className='createReportButton' onClick={this.createReport}>Создать отчет</button>
+  render() {
+    return (
+      <button className="createReportButton" onClick={this.createReport}>
+        Создать отчет
+      </button>
+    )
   }
 }
-
-
-

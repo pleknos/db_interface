@@ -1,11 +1,11 @@
-import React        from 'react'
-import Select       from 'react-select'
+import React from 'react'
+import Select from 'react-select'
 import { niceDate } from 'utilities/Normalizers'
 import 'components/main_page/input_table/react-select.scss'
 import './InputField.scss'
 
 export default class InputField extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     let defaultValue = ''
@@ -17,7 +17,7 @@ export default class InputField extends React.Component {
 
     defaultValue = this.props.default || defaultValue
 
-    this.state = {selectedOption: defaultValue, contents: []}
+    this.state = { selectedOption: defaultValue, contents: [] }
 
     this.props.selectOption(this.state.selectedOption)
 
@@ -25,65 +25,60 @@ export default class InputField extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this)
   }
 
-  componentDidUpdate (prevProps, prevState) {
-
-    if (prevState.selectedOption !== this.state.selectedOption) this.props.selectOption(
-      this.state.selectedOption)
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.selectedOption !== this.state.selectedOption) this.props.selectOption(this.state.selectedOption)
 
     if (this.props.default !== prevProps.default) {
-
-      this.setState(
-        {selectedOption: this.props.default},
-      )
+      this.setState({ selectedOption: this.props.default })
     }
   }
 
-  handleSelectChange (selectedOption) {
+  handleSelectChange(selectedOption) {
     if (selectedOption !== null) {
-      this.setState({selectedOption: selectedOption.id})
+      this.setState({ selectedOption: selectedOption.id })
     } else {
-      this.setState({selectedOption: ''})
+      this.setState({ selectedOption: '' })
     }
   }
 
-  handleInputChange (event) {
-    this.setState({selectedOption: event.target.value})
+  handleInputChange(event) {
+    this.setState({ selectedOption: event.target.value })
   }
 
-  componentWillMount () {
+  componentWillMount() {
     if (this.props.column.contents) {
-      this.setState({contents: this.props.column.contents})
+      this.setState({ contents: this.props.column.contents })
     }
   }
 
-  render () {
+  render() {
     const column = this.props.column
-    const {selectedOption} = this.state
+    const { selectedOption } = this.state
 
     if (this.state.contents.length > 0) {
-      return <Select
-        name='form-field-name'
-        value={selectedOption}
-        onChange={this.handleSelectChange}
-        placeholder={column.literal}
-        options={this.state.contents}
-        noResultsText='Совпадения не найдены'
-        multi={false}
-        labelKey='name'
-        valueKey='id'
-        matchProp='any'
-        menuContainerStyle={{width: '200px'}}
-      />
+      return (
+        <Select
+          name="form-field-name"
+          value={selectedOption}
+          onChange={this.handleSelectChange}
+          placeholder={column.literal}
+          options={this.state.contents}
+          noResultsText="Совпадения не найдены"
+          multi={false}
+          labelKey="name"
+          valueKey="id"
+          matchProp="any"
+          menuContainerStyle={{ width: '200px' }}
+        />
+      )
     } else {
       return (
-        <div className='Select-control field'>
-          <div className='Select-input'>
-            <input type='text' placeholder={column.literal} value={selectedOption}
-                   onChange={this.handleInputChange} />
+        <div className="Select-control field">
+          <div className="Select-input">
+            <input type="text" placeholder={column.literal} value={selectedOption} onChange={this.handleInputChange} />
           </div>
         </div>
       )
     }
-
   }
 }

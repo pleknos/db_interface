@@ -1,22 +1,22 @@
-import React            from 'react'
-import ChooseReport     from 'components/reports_page/ChooseReport'
-import ChoosePeriod     from 'components/reports_page/ChoosePeriod'
+import React from 'react'
+import ChooseReport from 'components/reports_page/ChooseReport'
+import ChoosePeriod from 'components/reports_page/ChoosePeriod'
 import ChooseActivities from 'components/reports_page/ChooseActivities'
-import CreateReport     from 'components/reports_page/CreateReport'
+import CreateReport from 'components/reports_page/CreateReport'
 import './index.scss'
 
 export default class ReportsPage extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
   }
 
-  choose (type, value) {
-    this.setState({[type]: value})
+  choose(type, value) {
+    this.setState({ [type]: value })
   }
 
-  render () {
+  render() {
     return (
-      <div className='reports'>
+      <div className="reports">
         <ChooseReport onChange={(t, v) => this.choose(t, v)} />
         <ChoosePeriod onChange={(t, v) => this.choose(t, v)} />
         <ChooseActivities onChange={(t, v) => this.choose(t, v)} />

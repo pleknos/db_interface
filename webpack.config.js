@@ -8,29 +8,25 @@ module.exports = {
       src: path.resolve(__dirname, 'src'),
       components: path.resolve(__dirname, 'src/components'),
       utilities: path.resolve(__dirname, 'src/utilities'),
-      configs: path.resolve(__dirname, 'src/configs'),
-    },
+      configs: path.resolve(__dirname, 'src/configs')
+    }
   },
   output: {
     path: path.resolve(__dirname, 'app'),
-    filename: 'main.js',
+    filename: 'main.js'
   },
   target: 'electron-renderer',
   externals: [nodeExternals()],
   watch: true,
   watchOptions: {
-    ignored: /node_modules/,
+    ignored: /node_modules/
   },
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -39,20 +35,15 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'fonts/',
-            },
-          }],
+              outputPath: 'fonts/'
+            }
+          }
+        ]
       },
       {
         test: /\.(js|jsx)$/,
-        use: 'babel-loader',
-      },
-      {
-        test: /\.html$/,
-        exclude: /node_modules/,
-        use: {loader: 'html-loader'},
-      },
-    ],
-  },
+        use: 'babel-loader'
+      }
+    ]
+  }
 }
-

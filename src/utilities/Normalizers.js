@@ -23,7 +23,7 @@ export const toInputView = (field, column) => {
 
 export const toOutputView = (field, column) => {
   if (column.type === 'date') return field.replace(/[\W]/g, '/')
-  if (column.type === 'currency') return parseInt((field.replace(/[\s]/g, '').replace(/[,]/g, '.')) * 100)
+  if (column.type === 'currency') return parseInt(field.replace(/[\s]/g, '').replace(/[,]/g, '.') * 100)
   return field
 }
 
@@ -33,11 +33,10 @@ export const niceDate = date => {
 
 export const inputDate = date => {
   let month = (date.getMonth() + 1).toString()
-  let rdate = (date.getDate()).toString()
+  let rdate = date.getDate().toString()
 
   month = month.length === 2 ? month : '0' + month
   rdate = rdate.length === 2 ? rdate : '0' + rdate
 
   return `${date.getFullYear()}-${month}-${rdate}`
 }
-
