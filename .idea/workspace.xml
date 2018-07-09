@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35774edf-2881-4bd1-94c1-3b3125add39a" name="Default" comment="fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" />
-    </list>
+    <list default="true" id="35774edf-2881-4bd1-94c1-3b3125add39a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -47,8 +44,8 @@
       <file leaf-file-name=".eslintrc.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.eslintrc.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+            <state relative-caret-position="390">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -309,7 +306,7 @@
       <workItem from="1530782405509" duration="3311000" />
       <workItem from="1530825175354" duration="65000" />
       <workItem from="1531140073321" duration="1202000" />
-      <workItem from="1531141287603" duration="6146000" />
+      <workItem from="1531141287603" duration="6208000" />
     </task>
     <task id="LOCAL-00001" summary="MAin logic of ChangeRowModal finished">
       <created>1530045906145</created>
@@ -465,17 +462,24 @@
       <option name="project" value="LOCAL" />
       <updated>1531147673974</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix">
+      <created>1531147876335</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1531147876335</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197495000" />
+    <option name="totallyTimeSpent" value="197557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1609375" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1609375" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50104165" side_tool="true" weight="0.26745436" />
@@ -483,7 +487,7 @@
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32975295" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49895832" weight="0.22663802" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.25993556" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.25993556" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.39849624" />
       <window_info anchor="bottom" id="TypeScript" order="1" />
@@ -915,8 +919,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        <state relative-caret-position="390">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
